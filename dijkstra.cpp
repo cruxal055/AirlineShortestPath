@@ -121,29 +121,6 @@ void dijkstra::perform(int airportIndex)
     }
 }
 
-/*QString dijkstra::displayItineraries(int beginning, int end)
-{
-    QString itinerary;
-    stack<index> reverseOrder;
-    while(end != beginning)
-    {
-        reverseOrder.push(fastest[end]);
-        end = fastest[end].lastVertex;
-    }
-    double totalDistance = 0;
-    while(!reverseOrder.empty())
-    {
-        index temp = reverseOrder.top();
-        itinerary.append("Take airline: " + QString::fromStdString(temp.company.airName) + " at " +
-                         QString::fromStdString(allVertex[temp.lastVertex]) + " and fly to " +
-                         QString::fromStdString(allVertex[temp.currentVertex]) + " for " +
-                         QString::number(temp.distance - totalDistance) + " miles \n\n");
-        totalDistance = temp.distance;
-        reverseOrder.pop();
-    }
-    return itinerary;
-}*/
-
 void dijkstra::displayItinerary(QTextEdit *textBox, int start, int end)
 {
     stack<index> reverseOrder;
